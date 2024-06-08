@@ -1,1 +1,8 @@
-spring.application.name=stock
+spring:
+  application:
+    name: stock
+
+mqtt:
+  brocker:
+    url: tcp://localhost:1883 # secured if not 8883
+
