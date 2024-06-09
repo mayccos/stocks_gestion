@@ -24,6 +24,7 @@ public class MqttConfig {
     @Value("${mqtt.password}")
     private String password;
 
+
     @Bean
     public MqttClient mqttClient() throws MqttException {
         // Client instantiation
