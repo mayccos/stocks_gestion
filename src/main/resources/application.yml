@@ -4,7 +4,7 @@ spring:
   datasource:
     url: jdbc:mariadb://mysql-mayccos.alwaysdata.net/mayccos_stockdb
     username: mayccos_stock
-    password: josepossedeunzoo
+    password:
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
@@ -19,4 +19,4 @@ mqtt:
   client:
     id: stock-app
   username: user-app
-  password: josepossedeunzoo
+  password: 
