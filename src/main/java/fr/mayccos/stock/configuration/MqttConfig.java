@@ -1,14 +1,19 @@
 package fr.mayccos.stock.configuration;
 
 
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class MqttConfig {
 
     @Value("${mqtt.brocker.url}")
-    private String brockerUrl;
+    private String brockerURL;
 
     @Value("${mqtt.client.id}")
     private String clientId;
@@ -18,4 +23,17 @@ public class MqttConfig {
 
     @Value("${mqtt.password}")
     private String password;
+
+    @Bean
+    public MqttClient mqttClient() throws MqttException {
+        // Client instantiation
+        MqttClient mqttClient = new MqttClient(brockerURL, clientId, new MemoryPersistence());
+
+        // additional arguments
+        MqttConnectOptions options = new MqttConnectOptions();
+        options.setUserName(username);
+        options.setPassword(password.toCharArray());
+        mqttClient.connect(options);
+        return mqttClient;
+    }
 }

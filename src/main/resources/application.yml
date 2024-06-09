@@ -1,8 +1,22 @@
 spring:
   application:
     name: stock
+  datasource:
+    url: jdbc:mariadb://mysql-mayccos.alwaysdata.net/mayccos_stockdb
+    username: mayccos_stock
+    password: josepossedeunzoo
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+
 
 mqtt:
   brocker:
     url: tcp://localhost:1883 # secured if not 8883
-
+  client:
+    id: stock-app
+  username: user-app
+  password: josepossedeunzoo
