@@ -1,10 +1,14 @@
 spring:
+
+  config:
+      import: optional:file:.env[.properties]
+
   application:
     name: stock
   datasource:
     url: jdbc:mariadb://mysql-mayccos.alwaysdata.net/mayccos_stockdb
     username: mayccos_stock
-    password:
+    password: ${DATABASE_PASSWORD}
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
@@ -19,4 +23,4 @@ mqtt:
   client:
     id: stock-app
   username: user-app
-  password: 
+  password: ${DATABASE_PASSWORD}

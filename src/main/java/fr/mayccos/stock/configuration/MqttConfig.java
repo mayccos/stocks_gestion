@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MqttConfig {
 
+
     @Value("${mqtt.brocker.url}")
     private String brockerURL;
 
@@ -23,6 +24,7 @@ public class MqttConfig {
 
     @Value("${mqtt.password}")
     private String password;
+
 
 
     @Bean
