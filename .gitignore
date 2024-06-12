@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/java,intellij+all,macos,windows,linux,visualstudiocode,eclipse,maven
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,intellij+all,macos,windows,linux,visualstudiocode,eclipse,maven
 
+.env
 ### Eclipse ###
 .metadata
 bin/
@@ -282,7 +283,7 @@ ehthumbs_vista.db
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
-.env
+
 # Windows Installer files
 *.cab
 *.msi
