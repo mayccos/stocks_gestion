@@ -1,0 +1,1 @@
+INSERT INTO product(product_name, product_description, product_price, product_quantity) VALUES ('stylo', 'stylo bleu', 1.5, 1)

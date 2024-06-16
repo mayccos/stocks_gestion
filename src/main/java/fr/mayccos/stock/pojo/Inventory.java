@@ -9,12 +9,9 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Warehouse {
+public class Inventory {
+
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long warehouseId; // en base : entrepot_id
-    private String warehouseName;
-    private String warehouseAddress;
-
-
+    private Long inventoryId;
 }

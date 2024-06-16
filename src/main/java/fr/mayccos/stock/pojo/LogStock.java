@@ -5,7 +5,6 @@ import fr.mayccos.stock.pojo.state.Action;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
@@ -18,9 +17,11 @@ public class LogStock {
     private Long id;
 
     private LocalDateTime date;
+
+    @Enumerated(EnumType.STRING)
     private Action action;
     private Long product_id;
-    private Long quantity;
+    private Integer quantity;
 
 
 }

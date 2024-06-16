@@ -12,7 +12,7 @@ spring:
     driver-class-name: org.mariadb.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     database-platform: org.hibernate.dialect.MySQL8Dialect
 
 
@@ -24,3 +24,5 @@ mqtt:
     id: stock-app
   username: user-app
   password: ${DATABASE_PASSWORD}
+server:
+  port: 8081
